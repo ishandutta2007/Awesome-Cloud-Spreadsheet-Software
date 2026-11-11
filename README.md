@@ -1,6 +1,6 @@
 # Awesome-Cloud-Spreadsheet-Software
 
-# Top Cloud Spreadsheet Software Ecosystem
+## Top Cloud Spreadsheet Software Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Browser-Based Spreadsheets, Real-Time Collaboration & Data Analysis*  
