@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Linear Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#070b14" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f2d42" stroke-width="0.8" opacity="0.4" />
+    </pattern>
+
+    <!-- Glow Gradients -->
+    <radialGradient id="glow-teal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-emerald" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Text Gradient -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#a78bfa" />
+    </linearGradient>
+
+    <linearGradient id="cell-highlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#4facfe" stop-opacity="0.2" />
+    </linearGradient>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 50px;
+        letter-spacing: -1px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 19px;
+        letter-spacing: 0.5px;
+        fill: #94a3b8;
+      }
+      .badge-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #e2e8f0;
+      }
+      .cell-text {
+        font-family: 'Consolas', 'Courier New', monospace;
+        font-size: 11px;
+        fill: #64748b;
+      }
+
+      /* Subtle CSS Animations */
+      @keyframes pulseOrb {
+        0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.4; }
+        50% { transform: scale(1.15) translate(-15px, 10px); opacity: 0.7; }
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes scanningGlow {
+        0% { transform: translateX(0); opacity: 0.2; }
+        50% { opacity: 0.8; }
+        100% { transform: translateX(360px); opacity: 0.2; }
+      }
+
+      .animated-orb1 {
+        animation: pulseOrb 8s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .animated-orb2 {
+        animation: pulseOrb 10s ease-in-out infinite alternate;
+        transform-origin: center;
+      }
+      .floating-grid {
+        animation: floatSlow 6s ease-in-out infinite;
+      }
+      .scanner-bar {
+        animation: scanningGlow 4s ease-in-out infinite alternate;
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="420" fill="url(#bg-grad)" rx="16" />
+
+  <!-- Animated Background Glowing Orbs (placed strictly in background) -->
+  <circle class="animated-orb1" cx="200" cy="120" r="220" fill="url(#glow-teal)" />
+  <circle class="animated-orb2" cx="1020" cy="260" r="260" fill="url(#glow-emerald)" />
+  <circle class="animated-orb1" cx="600" cy="360" r="240" fill="url(#glow-purple)" />
+
+  <!-- Background Isometric / Blueprint Grid -->
+  <rect width="1200" height="420" fill="url(#grid)" rx="16" />
+
+  <!-- Subtle Sheet Mockup floating in the background on right -->
+  <g class="floating-grid" transform="translate(760, 48)" opacity="0.65">
+    <!-- Outer Glass Window -->
+    <rect x="0" y="0" width="380" height="250" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <!-- Window Header -->
+    <rect x="0" y="0" width="380" height="28" rx="10" fill="#1e293b" />
+    <circle cx="16" cy="14" r="4" fill="#ef4444" />
+    <circle cx="28" cy="14" r="4" fill="#eab308" />
+    <circle cx="40" cy="14" r="4" fill="#22c55e" />
+    <text x="60" y="18" font-family="-apple-system, sans-serif" font-size="11" fill="#94a3b8">Cloud_Sheet_Engine.xlsx</text>
+
+    <!-- Formula Bar -->
+    <rect x="10" y="34" width="360" height="22" rx="4" fill="#0b1120" stroke="#1e293b" />
+    <text x="18" y="49" font-family="'Consolas', monospace" font-size="11" fill="#38bdf8">fx</text>
+    <text x="38" y="49" font-family="'Consolas', monospace" font-size="11" fill="#e2e8f0">=SUM(Q1:Q4) * GROWTH_RATE</text>
+
+    <!-- Spreadsheet Column Headers -->
+    <rect x="10" y="62" width="35" height="18" fill="#1e293b" />
+    <rect x="46" y="62" width="75" height="18" fill="#1e293b" />
+    <rect x="122" y="62" width="85" height="18" fill="#1e293b" />
+    <rect x="208" y="62" width="85" height="18" fill="#1e293b" />
+    <rect x="294" y="62" width="76" height="18" fill="#1e293b" />
+    <text x="76" y="75" class="cell-text">A [Asset]</text>
+    <text x="150" y="75" class="cell-text">B [Realtime]</text>
+    <text x="236" y="75" class="cell-text">C [Revenue]</text>
+    <text x="320" y="75" class="cell-text">D [Scale]</text>
+
+    <!-- Grid Rows -->
+    <!-- Row 1 (Active / Highlighted) -->
+    <rect x="10" y="82" width="35" height="24" fill="#172554" />
+    <text x="22" y="98" class="cell-text">1</text>
+    <rect x="46" y="82" width="75" height="24" fill="url(#cell-highlight)" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="52" y="98" font-family="'Consolas', monospace" font-size="11" fill="#ffffff" font-weight="bold">Sheets</text>
+    <rect x="122" y="82" width="85" height="24" fill="#0f172a" stroke="#1e293b" />
+    <text x="128" y="98" class="cell-text">Co-author</text>
+    <rect x="208" y="82" width="85" height="24" fill="#0f172a" stroke="#1e293b" />
+    <text x="214" y="98" font-family="'Consolas', monospace" font-size="11" fill="#34d399">$100B+</text>
+    <rect x="294" y="82" width="76" height="24" fill="#0f172a" stroke="#1e293b" />
+    <text x="300" y="98" class="cell-text">Global</text>
+
+    <!-- Row 2 -->
+    <rect x="10" y="108" width="35" height="24" fill="#1e293b" />
+    <text x="22" y="124" class="cell-text">2</text>
+    <rect x="46" y="108" width="75" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="52" y="124" font-family="'Consolas', monospace" font-size="11" fill="#cbd5e1">Excel</text>
+    <rect x="122" y="108" width="85" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="128" y="124" class="cell-text">Live Sync</text>
+    <rect x="208" y="108" width="85" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="214" y="124" font-family="'Consolas', monospace" font-size="11" fill="#34d399">$3T+</text>
+    <rect x="294" y="108" width="76" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="300" y="124" class="cell-text">Enterprise</text>
+
+    <!-- Row 3 -->
+    <rect x="10" y="134" width="35" height="24" fill="#1e293b" />
+    <text x="22" y="150" class="cell-text">3</text>
+    <rect x="46" y="134" width="75" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="52" y="150" font-family="'Consolas', monospace" font-size="11" fill="#cbd5e1">NocoDB</text>
+    <rect x="122" y="134" width="85" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="128" y="150" class="cell-text">Self-Host</text>
+    <rect x="208" y="134" width="85" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="214" y="150" font-family="'Consolas', monospace" font-size="11" fill="#f59e0b">65k★</text>
+    <rect x="294" y="134" width="76" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="300" y="150" class="cell-text">OSS</text>
+
+    <!-- Row 4 -->
+    <rect x="10" y="160" width="35" height="24" fill="#1e293b" />
+    <text x="22" y="176" class="cell-text">4</text>
+    <rect x="46" y="160" width="75" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="52" y="176" font-family="'Consolas', monospace" font-size="11" fill="#cbd5e1">Univer</text>
+    <rect x="122" y="160" width="85" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="128" y="176" class="cell-text">CanvasSDK</text>
+    <rect x="208" y="160" width="85" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="214" y="176" font-family="'Consolas', monospace" font-size="11" fill="#f59e0b">23k★</text>
+    <rect x="294" y="160" width="76" height="24" fill="#0b1120" stroke="#1e293b" />
+    <text x="300" y="176" class="cell-text">Modern</text>
+
+    <!-- Dynamic scanning bar across grid -->
+    <line class="scanner-bar" x1="10" y1="80" x2="10" y2="210" stroke="#00f2fe" stroke-width="2" opacity="0.8" />
+  </g>
+
+  <!-- FOREGROUND CONTENT: Header, Titles, Pills (Guaranteed No Overlap) -->
+  <g transform="translate(80, 0)">
+    <!-- Top Category Tag -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="220" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+      <circle cx="14" cy="14" r="5" fill="#10b981" />
+      <text x="28" y="19" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1">CURATED AWESOME LIST</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="150" class="title-text" fill="url(#title-grad)">
+      Awesome Cloud Spreadsheet
+    </text>
+    <text x="0" y="198" class="title-text" fill="#ffffff" font-size="44">
+      Software Ecosystem
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="240" class="subtitle-text">
+      Curated guide to SaaS platforms, self-hosted engines &amp; open-source grids
+    </text>
+
+    <!-- Feature Pills in Foreground -->
+    <g transform="translate(0, 276)">
+      <!-- Pill 1: SaaS Leaders -->
+      <g transform="translate(0, 0)">
+        <rect width="185" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="14" y="24" class="badge-text">📊 SaaS Market Leaders</text>
+      </g>
+      <!-- Pill 2: Open Source Engines -->
+      <g transform="translate(200, 0)">
+        <rect width="185" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="14" y="24" class="badge-text">⚡ Open-Source Grids</text>
+      </g>
+      <!-- Pill 3: Realtime Collaboration -->
+      <g transform="translate(400, 0)">
+        <rect width="195" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="14" y="24" class="badge-text">🤝 Real-Time Collaboration</text>
+      </g>
+      <!-- Pill 4: Data Sovereignty -->
+      <g transform="translate(610, 0)">
+        <rect width="175" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="14" y="24" class="badge-text">🔒 Self-Hosted &amp; WOPI</text>
+      </g>
+    </g>
+
+    <!-- Bottom Stat Bar -->
+    <g transform="translate(0, 345)">
+      <text x="0" y="20" font-family="-apple-system, sans-serif" font-size="13" fill="#64748b">
+        TRACKING <tspan fill="#38bdf8" font-weight="bold">10+ TOP SAAS PLATFORMS</tspan> &amp; <tspan fill="#34d399" font-weight="bold">18+ OPEN-SOURCE ENGINES</tspan> • UPDATED CONTINUOUSLY
+      </text>
+    </g>
+  </g>
+</svg>
