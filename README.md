@@ -64,9 +64,9 @@ The table below catalogs premier commercial cloud spreadsheet solutions, ranked 
 
 ## 🔓 Open-Source GitHub Projects & Engines
 
-The following open-source spreadsheet engines, data grids, and self-hosted collaboration suites are ranked in descending order by **GitHub Star Count**. Each badge links directly to the project's stargazers community.
+The following open-source spreadsheet engines, data grids, and self-hosted collaboration suites are ranked in descending order by **GitHub Stars_Count**. Each badge links directly to the project's stargazers community.
 
-| Project | GitHub Stars | Description |
+| Project | GitHub_Stars | Description |
 |:---|:---:|:---|
 | **[NocoDB](https://github.com/nocodb/nocodb)** | [![Stars](https://img.shields.io/github/stars/nocodb/nocodb?style=social&color=white)](https://github.com/nocodb/nocodb/stargazers) | Open-source no-code platform turning PostgreSQL, MySQL, SQL Server, and SQLite into an intelligent collaborative spreadsheet. Top self-hosted Airtable alternative. |
 | **[Univer](https://github.com/dream-num/univer)** | [![Stars](https://img.shields.io/github/stars/dream-num/univer?style=social&color=white)](https://github.com/dream-num/univer/stargazers) | Full-stack, enterprise-grade open-source TypeScript SDK for spreadsheets, docs, and slides. High-performance canvas rendering with real-time multi-user editing. |
@@ -104,7 +104,7 @@ Contributions are warmly encouraged! To add or update an entry:
 
 1. 🍴 **Fork** this repository.
 2. 📝 **Create a new branch** (`git checkout -b feature/add-new-spreadsheet`).
-3. ✏️ **Update `README.md`**: Follow the exact markdown table format, include starting tier pricing, explicit free tier limits, company valuation or star badge, and clear descriptions.
+3. ✏️ **Update `README.md`**: Follow the exact markdown table format, include starting tier pricing, explicit free tier limits, company valuation or Stars_Badge, and clear descriptions.
 4. 🚀 **Submit a Pull Request** with a brief summary of what you added or improved.
 
 ---
